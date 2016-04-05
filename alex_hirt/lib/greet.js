@@ -4,7 +4,7 @@ module.exports = exports = {
     }
 };
 
-(function greetNode() {
+(function hiNode() {
   if(process.argv[2]) {
     console.log('hello ' + process.argv[2]);
   }
