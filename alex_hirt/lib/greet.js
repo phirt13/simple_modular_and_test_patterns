@@ -1,4 +1,4 @@
-//ask about clarification about why setting const hello = module.exports = exports = {....} is used for
+//ask about clarification about setting const hello = module.exports = exports = {....}
 module.exports = exports = {
     greet : function(name) {
       return 'hello ' + name;
