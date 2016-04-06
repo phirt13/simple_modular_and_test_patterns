@@ -8,6 +8,7 @@ gulp.task('lint:test', function() {
   return gulp.src(['./test/**/*test.js'])
     .pipe(eslint({
       rules: {
+        'indent': [2, 2]
       },
       envs: [
         'mocha',
@@ -22,8 +23,13 @@ var noTestScripts = ['./lib/**/*.js', 'gulpfile.js'];
 gulp.task('lint', function() {
   return gulp.src(noTestScripts)
     .pipe(eslint({
+      rules: {
+        'quotes': [2, 'single'],
+        'semi': [2, 'always'],
+        'indent': [2, 2]
+      },
       envs: [
-      'es6'
+        'es6'
       ]
     }))
     .pipe(eslint.format());
@@ -41,5 +47,5 @@ gulp.task('mocha', function() {
 });
 
 gulp.task('lint:all', ['lint:test', 'lint']);
-gulp.task('do-almost-everything', ['lint:test', 'lint', 'mocha'])
+gulp.task('do-almost-everything', ['lint:test', 'lint', 'mocha']);
 gulp.task('default', ['do-almost-everything']);
