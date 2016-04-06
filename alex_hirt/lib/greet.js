@@ -11,7 +11,3 @@ module.exports = exports = {
     console.log('hello ' + process.argv[2]);
   }
 }());
-
-
-
-
